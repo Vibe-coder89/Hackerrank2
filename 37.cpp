@@ -19,47 +19,23 @@ For every object created: • Print constructor messages • After all objects a
 #include <iostream>
 using namespace std;
 
-class Base {
+int main() {
+    int n;
 
-public:
+    if (!(cin >> n) || n < 1 || n > 5) {
+        cout << "Invalid Input";
+        return 0;
+    }
 
-    Base() {
+    for (int i = 0; i < n; i++) {
         cout << "Base Ctor" << endl;
-    }
-
-    ~Base() {
-        cout << "Base Dtor" << endl;
-    }
-};
-
-class Derived : public Base {
-
-public:
-
-    Derived() {
         cout << "Derived Ctor" << endl;
     }
 
-    ~Derived() {
+    for (int i = n - 1; i >= 0; i--) {
         cout << "Derived Dtor" << endl;
+        cout << "Base Dtor" << endl;
     }
-};
-
-int main() {
-
-    int n;
-
-    if(!(cin >> n)) {
-        cout << "Invalid Input";
-        return 0;
-    }
-
-    if(n < 1 || n > 5) {
-        cout << "Invalid Input";
-        return 0;
-    }
-
-    Derived obj[n];
 
     return 0;
 }
