@@ -1,3 +1,21 @@
+Demonstrate multi-level inheritance and destructor execution order using input. Create three classes: • Base • Derived1 (inherits Base) • Derived2 (inherits Derived1) Each class must: • Print a message in constructor • Print a message in destructor
+
+Task You are given an integer input N: • If N = 1 → Create object normally • If N = 2 → Create object inside a block (scope test) • If N = 3 → Create object using dynamic memory (new/delete) • If N = 4 → Create multiple objects • If N = 5 → Nested scope object Print constructor and destructor call sequence.
+
+e.g 1 Base Constructor Derived1 Constructor Derived2 Constructor Derived2 Destructor Derived1 Destructor Base Destructor
+
+Input Format
+
+Single integer N
+
+Constraints
+
+1 ≤ N ≤ 5
+
+Output Format
+
+Print constructor and destructor messages in order.
+
 #include <iostream>
 using namespace std;
 
