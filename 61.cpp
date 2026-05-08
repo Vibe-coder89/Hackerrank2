@@ -14,36 +14,30 @@ Output Format
 
 Output Format • If withdrawal is successful: Withdrawal Successful. New Balance: • If withdrawal fails: Withdrawal Failed! Available Balance: Requested Amount: • Always print: rest of code...
 
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
+
 int main() {
-
-    double balance, amount;
-
-    cin >> balance >> amount;
-
-    try {
-
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int a,b;
+    cin>>a>>b;
+    if(a>=b){
+        cout<<"Withdrawal Successful. New Balance: "<<a-b<<endl;
         
-        if(amount > balance) {
-            throw amount;
-        }
-
-        balance = balance - amount;
-
-        cout << "Withdrawal Successful. New Balance: "
-             << balance << endl;
     }
-
-    catch(double amt) {
+    else{
 
         cout << "Withdrawal Failed!" << endl;
-        cout << "Available Balance: " << balance << endl;
-        cout << "Requested Amount: " << amt << endl;
+        cout << "Available Balance: " << a << endl;
+        cout << "Requested Amount: " << b << endl;
     }
-
-    cout << "rest of code...";
-
+    cout<<"rest of code..."<<endl;
     return 0;
+}
+
 }
