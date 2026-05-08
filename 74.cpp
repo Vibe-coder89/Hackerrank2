@@ -50,8 +50,7 @@ int main() {
         }
 
         
-        if(sum == (int)sum)
-            cout << (int)sum;
+        
         else
             cout << sum;
     }
