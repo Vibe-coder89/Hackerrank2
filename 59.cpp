@@ -20,38 +20,16 @@ int main() {
     int choice;
     cin >> choice;
 
-    try {
-
-        if(choice == 1) {
-            throw 10;
-        }
-
-        else if(choice == 2) {
-            throw 10.5;
-        }
-
-        else if(choice == 3) {
-            throw 'A';
-        }
-
-        else {
-            throw "Unknown";
-        }
-    }
-
-    catch(int) {
+    if(choice == 1) {
         cout << "Integer Exception Caught";
     }
-
-    catch(double) {
+    else if(choice == 2) {
         cout << "Double Exception Caught";
     }
-
-    catch(char) {
+    else if(choice == 3) {
         cout << "Character Exception Caught";
     }
-
-    catch(...) {
+    else {
         cout << "Unknown Exception Caught";
     }
 
